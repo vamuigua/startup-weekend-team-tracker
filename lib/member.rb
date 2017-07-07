@@ -26,5 +26,10 @@ class Member
       @@members.push(self)
     end
     
+    #method for clearing/removing the members in a team
+    define_singleton_method(:clear) do
+      @@members = []
+    end
+    
 end
   
