@@ -16,5 +16,10 @@ class Member
       @id
     end
     
+    #class method for checking all members in a group
+    define_singleton_method(:all) do
+      @@members
+    end
+    
 end
   
