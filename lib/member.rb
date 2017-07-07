@@ -11,14 +11,19 @@ class Member
       @id = @@members.length().+(1)
     end
     
-    #method id to return the id of a member
+    #method id to return the id of a member in a team
     define_method(:id) do
       @id
     end
     
-    #class method for checking all members in a group
+    #class method for checking all members in a team
     define_singleton_method(:all) do
       @@members
+    end
+    
+    #method for saving new members to a team
+    define_method(:save) do
+      @@members.push(self)
     end
     
 end
