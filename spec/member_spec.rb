@@ -25,3 +25,12 @@ describe("#save") do
         expect(Member.all()).to(eq([test_member]))
     end
 end
+
+#spec to clear the members in a team
+describe(".clear") do
+    it("empties out all of the saved members from the team") do
+        Member.new({:name=>"Joneh"}).save()
+        Member.clear()
+        expect(Member.all()).to(eq([]))
+    end
+end
