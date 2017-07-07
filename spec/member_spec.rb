@@ -16,3 +16,12 @@ describe(".all") do
         expect(Member.all()).to(eq([]))
     end
 end
+
+#spec to save new members
+describe("#save") do
+    it("adds a member to the team of saved members") do
+        test_member = Member.new({:name=>"Joneh"})
+        test_member.save()
+        expect(Member.all()).to(eq([test_member]))
+    end
+end
