@@ -31,5 +31,16 @@ class Member
       @@members = []
     end
     
+    #method to find the id of a member in a team
+    define_singleton_method(:find) do |identification|
+      identified_member = nil
+      @@members.each() do |member|
+        if member.id().eql?(identification.to_i())
+          identified_member = member
+        end
+      end
+      identified_member
+    end
+    
 end
   
