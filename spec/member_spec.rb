@@ -9,3 +9,10 @@ describe("#name") do
         expect(test_member.name()).to(eq("Joneh"))
     end
 end
+
+#spec that checks members in team at first when empty  
+describe(".all") do
+    it("members are empty at first") do
+        expect(Member.all()).to(eq([]))
+    end
+end
