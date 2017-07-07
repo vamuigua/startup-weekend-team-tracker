@@ -34,3 +34,23 @@ describe(".clear") do
         expect(Member.all()).to(eq([]))
     end
 end
+
+#spec to give the id of the member in a team
+describe("#id") do
+    it("returns the id of the mamber") do
+        test_member = Member.new({:name=>"Joneh"})
+        test_member.save()
+        expect(test_member.id()).to(eq(1))
+    end
+end
+
+#spec to find each member of a team by the id
+describe(".find") do
+    it("returns a member of a team by its id number") do
+        test_member = Member.new({:name=>"Joneh"})
+        test_member.save()
+        test_member2 = Member.new({:name=>"June"})
+        test_member2.save() 
+        expect(Member.find(test_member.id())).to(eq(test_member))
+    end
+end
