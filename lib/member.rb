@@ -1,14 +1,13 @@
 class Member
     #attribute reader
-    #attr_reader(:name)
+    attr_reader(:member_name)
     
     #array to store members
     @@members = []
     
     #initialize variables
-    define_method(:initialize) do |member|
-      #@name = attributes.fetch(:name)
-      @name = name
+    define_method(:initialize) do |attributes|
+      @member_name = attributes.fetch(:member_name)
       @id = @@members.length().+(1)
     end
     
@@ -17,9 +16,9 @@ class Member
       @id
     end
 
-    #instance method for name
-    define_method(:name) do
-      @name
+    #instance method for member_name
+    define_method(:member_name) do
+      @member_name
     end
     
     #class method for checking all members in a team
