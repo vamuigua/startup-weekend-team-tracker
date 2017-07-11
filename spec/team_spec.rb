@@ -68,5 +68,11 @@ require('rspec')
      end
    end
 
-
+    describe("#id") do
+      it("returns the id of a team") do
+        test_team = Team.new({:team_name=> "CoderX"})
+        test_team.save()
+        expect(test_team.id()).to(eq(1))
+      end
+    end
   end
