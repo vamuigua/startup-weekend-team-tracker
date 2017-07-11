@@ -58,7 +58,7 @@ require('rspec')
    end
 
    describe("#members") do
-     it("initially returns an empty array of members for the Teams") do
+     it("initially returns the members for a Team") do
        test_team = Team.new({:team_name=> "CoderX"})
        test_member = Member.new({:member_name=>"June"})
        test_member.save()
