@@ -3,7 +3,6 @@ require('sinatra/reloader')
 require('./lib/team')
 require('./lib/member')
 also_reload('lib/**/*.rb')
-require('pry')
 
 #route for index
 get('/') do
@@ -28,6 +27,12 @@ get("/teams") do
 	@teams = Team.all()
 	erb(:teams)
 end
+
+#get request to view specific team
+  get("/teams/:id") do
+    @team = Team.find(params.fetch("id").to_i())
+    erb(:team)
+  end
 
 #route to new member form
 get("/members/new") do
