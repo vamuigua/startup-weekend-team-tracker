@@ -1,6 +1,6 @@
 class Member
     #attribute reader
-    attr_reader(:member_name)
+    attr_reader(:id, :member_name)
     
     #array to store members
     @@members = []
@@ -10,17 +10,7 @@ class Member
       @member_name = attributes.fetch(:member_name)
       @id = @@members.length().+(1)
     end
-    
-    #method id to return the id of a member in a team
-    define_method(:id) do
-      @id
-    end
 
-    #instance method for member_name
-    define_method(:member_name) do
-      @member_name
-    end
-    
     #class method for checking all members in a team
     define_singleton_method(:all) do
       @@members
