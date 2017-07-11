@@ -7,7 +7,7 @@ class Team
 
 	#initialize method
 	define_method(:initialize) do |attributes|
-		@team_name = attributes.fetch(:team_name)
+		  @team_name = attributes.fetch(:team_name)
     	@id = @@teams.length().+(1)
     	@members = []
 	end
