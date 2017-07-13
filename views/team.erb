@@ -15,7 +15,7 @@
 
    <h3>Add a new member to <%= @team.team_name() %> </h3>
 
-  <form action="/members" method="post">
+  <form action="/teams/<%= @team.id%>" method="post">
     <input id="team_id" name="team_id" type="hidden" value="<%= @team.id() %>">
 
     <label for="member_name">Member's name:</label>
