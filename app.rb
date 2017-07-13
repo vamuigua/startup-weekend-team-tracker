@@ -14,11 +14,6 @@ get("/teams/new") do
 	erb(:team_form)
 end
 
-# get('team/:id/members/new') do
-# 	id = params.fetch('id').to_i
-# 	@team = Team.find(id)
-# 	erb(:member_form)
-# end
 #post request to post the teams
 post("/teams") do
 	team_name = params.fetch("team_name")
@@ -53,17 +48,3 @@ end
 get("/members/new") do
 	erb(:member_form)
 end
-
-#post request to post members
-# post("/members") do
-# 	member_name = params.fetch("member_name")
-# 	new_member = Member.new({:member_name=>member_name})
-# 	new_member.save()
-# 	erb(:success)
-# end
-
-# #get request to display members added
-# get("/members") do
-# 	@members = Members.all()
-# 	erb(:members)
-# end
