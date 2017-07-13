@@ -14,6 +14,8 @@ class Team
 
   	#method to add a member
   	define_method(:add_member) do |member|
+      id=@members.length().+(1)
+      member.id=id
     	@members.push(member)
   	end
 
