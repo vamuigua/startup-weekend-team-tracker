@@ -1,6 +1,6 @@
 class Member
     #attribute reader
-    attr_reader(:id, :member_name)
+    attr_accessor(:id, :member_name)
     
     #array to store members
     @@members = []
