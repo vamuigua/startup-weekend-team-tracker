@@ -1,20 +1,13 @@
-<h1>Your Current Teams</h1>
-
+<div class="teams">
+  <a class="waves-effect waves-light btn" href="/teams/new">Add New Team</a>
+  <h2>Available Teams</h2>
   <% if @teams.any?() %>
-    <h3>Here are your teams:</h3>
-
-    <ul>
-      <% @teams.each() do |team| %>
-        <li><a href="/teams/<%= team.id()%>"><%= team.team_name() %></a> </li>
-      <% end %>
-    </ul>
-
+  <ul>
+    <% @teams.each() do |team| %>
+    <li style="font-size: 20px;"><a href="/teams/<%= team.id()%>"><%= team.team_name() %></a> </li>
+    <% end %>
+  </ul>
   <% else %>
-
-      <p>There are no teams yet!</p>
-
+  <p>There are no teams yet!</p>
   <% end %>
-
-  <div class="container">
-    <a href="/">Home</a>
-  </div>
+</div>
