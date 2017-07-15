@@ -27,12 +27,7 @@ body {
 	color: black;
 }
 
-.teams{
-	padding: 30px 20px;
-	background-color: rgba(255, 255, 255, 0.9);
-}
-
-.success{
+.universal-layout{
 	padding: 30px 20px;
 	background-color: rgba(255, 255, 255, 0.9);
 }
