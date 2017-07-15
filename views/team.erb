@@ -1,30 +1,27 @@
-<h1><%= @team.team_name() %></h1>
-
-  <% if @team.members().any?() %>
+<div class="universal-layout">
+  <div>
+    <a class="waves-effect waves-light btn" href="/teams">View Teams</a>
+    <h2><%= @team.team_name() %></h2>
+    <hr>
+    <% if @team.members().any?() %>
     <h3>Here are all the members in this list:</h3>
-
     <ul>
       <% @team.members().each() do |member| %>
-        <li><%= member.member_name() %> </li>
+      <li><%= member.member_name() %> </li>
       <% end %>
     </ul>
-
     <% else %>
-      <p>There are no members on this team!</p>
+    <p>There are no members on this team!</p>
     <% end %>
-
-   <h3>Add a new member to <%= @team.team_name() %> </h3>
-
-  <form action="/teams/<%= @team.id%>" method="post">
-    <input id="team_id" name="team_id" type="hidden" value="<%= @team.id() %>">
-
-    <label for="member_name">Member's name:</label>
-    <input id="member_name" name="member_name" type="text">
-
-    <button type="submit">Add member</button>
-  </form>
-
-  <div class="container">
-    <a href="/">Home</a>
-    <a href="/teams">View All Teams</a>
+    <h4>Add a new member to <%= @team.team_name() %> </h4>
+    <form action="/teams/<%= @team.id%>" method="post">
+      <input id="team_id" name="team_id" type="hidden" value="<%= @team.id() %>">
+      <label for="member_name">Member's name:</label>
+      <input id="member_name" name="member_name" type="text" placeholder="Member's name">
+      <button class="btn waves-effect waves-light" type="submit" name="action">Add Member
+      <i class="material-icons right">send</i>
+      </button>
+    </form>
+    <br>
   </div>
+</div>
