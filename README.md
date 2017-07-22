@@ -1,17 +1,20 @@
 # startup-weekend-team-tracker
 
+![alt text](/public/images/screenshot.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-```
+
 Open Terminal and clone the project by typing
 
+```
 git clone https://github.com/vamuigua/startup-weekend-team-tracker.git
 
 cd startup-weekend-team-tracker
 ```
-Your now in the Project!
+Your now in the Project!👍
 
 ### Prerequisites
 
@@ -32,12 +35,9 @@ Inside the route of the project, type the code below in your terminal to install
 ```
 bundle install
 ```
+Then run: ```ruby app.rb```
 
-Then run:
-
-```
-ruby app.rb
-```
+Navigate to the following link in your Browser: ```localhost:4567```
 
 The app should now be running on your browser
 
@@ -47,12 +47,12 @@ Explain how to run the automated tests for this system
 
 ## Built With
 
-* [Ruby](https://www.ruby-lang.org/en/) - The web framework used
-
+* [Ruby](https://www.ruby-lang.org/en/) - Programming Language
+* [Materialize](http://materializecss.com/) - Front-end Frame Work 
 
 ## Authors
 
-* **Victor Allen** - [vamuigua](https://github.com/vamuigua)
+* **Victor Allen** - [vamuigua](https://github.com/vamuigua) :v:
 
 ## License
 
